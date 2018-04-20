@@ -20,14 +20,14 @@
                      <children>
                         <Button fx:id="btnPause" layoutX="200.0" layoutY="55.0" mnemonicParsing="false" onAction="#onPause" text="Pause" AnchorPane.bottomAnchor="14.0" />
                         <Button fx:id="btnNext" layoutX="133.0" layoutY="55.0" mnemonicParsing="false" onAction="#onNext" text="Next" AnchorPane.bottomAnchor="14.0" />
-                        <Button fx:id="btnVolumUP" layoutX="268.0" layoutY="55.0" mnemonicParsing="false" onAction="#onVolumUP" text="VolumUP" AnchorPane.bottomAnchor="14.0" />
+                        <Button fx:id="btnVolumeUP" layoutX="268.0" layoutY="55.0" mnemonicParsing="false" onAction="#onVolumeUP" text="VolumeUP" AnchorPane.bottomAnchor="14.0" />
                         <Button fx:id="btnToTime" layoutX="346.0" layoutY="21.0" mnemonicParsing="false" onAction="#onToTime" text="To time" AnchorPane.bottomAnchor="48.0" />
                         <Slider fx:id="slider" layoutX="3.0" layoutY="1.0" prefHeight="14.0" prefWidth="422.0" AnchorPane.bottomAnchor="79.0" />
                         <Label fx:id="lblCurretTime" layoutX="8.0" layoutY="29.0" text="0" AnchorPane.bottomAnchor="48.0" />
                         <Button fx:id="btnStop" layoutX="67.0" layoutY="55.0" mnemonicParsing="false" onAction="#onStop" text="Stop" AnchorPane.bottomAnchor="14.0" />
                         <TextField fx:id="txtFieldToTime" layoutX="194.0" layoutY="21.0" AnchorPane.bottomAnchor="48.0" />
                         <Button fx:id="btnPlay" layoutX="3.0" layoutY="55.0" mnemonicParsing="false" onAction="#onPlay" text="Play" AnchorPane.bottomAnchor="14.0" />
-                        <Button fx:id="btnVolumDown" layoutX="346.0" layoutY="55.0" mnemonicParsing="false" onAction="#onVolumDown" text="VolumDown" AnchorPane.bottomAnchor="14.0" />
+                        <Button fx:id="btnVolumeDown" layoutX="346.0" layoutY="55.0" mnemonicParsing="false" onAction="#onVolumeDown" text="VolumeDown" AnchorPane.bottomAnchor="14.0" />
                      </children>
                   </AnchorPane>
                   <Label fx:id="lblSelected" layoutX="19.0" layoutY="7.0" text="0" />

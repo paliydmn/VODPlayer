@@ -80,8 +80,6 @@ public class Controller {
     }
 
     public void onStop(ActionEvent actionEvent) {
-       // mp.setStartTime(Duration.millis(100));
-
         mp.stop();
     }
 
@@ -89,16 +87,6 @@ public class Controller {
         MediaPlayer.Status currentStatus = mp.getStatus();
 
         System.out.println(mp.getTotalDuration());
-        /*
-        if(currentStatus == MediaPlayer.Status.PLAYING)
-            mp.pause();
-        else if(currentStatus == MediaPlayer.Status.PAUSED || currentStatus == MediaPlayer.Status.STOPPED) {
-            System.out.println("Player will start at: " + mp.getCurrentTime());
-            mp.play();
-        }
-
-        mp.setStartTime(Duration.valueOf(String.valueOf(mp.getCurrentTime())) );*/
-
 
         mp.seek( mp.getCurrentTime().add(new Duration(20000)));
         System.out.println("Current time: " + mp.getCurrentTime());
@@ -110,18 +98,15 @@ public class Controller {
 
     }
 
-    public void onVolumUP(ActionEvent actionEvent) {
+    public void onVolumeUP(ActionEvent actionEvent) {
         double vol = mp.getVolume();
         mp.setVolume(vol+0.1);
         System.out.println(mp.currentRateProperty());
     }
 
-    public void onVolumDown(ActionEvent actionEvent) {
+    public void onVolumeDown(ActionEvent actionEvent) {
         double vol = mp.getVolume();
         mp.setVolume(vol-0.2);
-
-
-
     }
 
     public void onToTime(ActionEvent actionEvent) {
