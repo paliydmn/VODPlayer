@@ -58,7 +58,6 @@
      -fx-bottom: 20px;
      -fx-z-index: 2;
      -fx-opacity: 1;
-     -fx-box-shadow: 0 0 10px rgba(0,0,0,0.3);
      -fx-transition: opacity 0.3s ease-in;
  }
 
@@ -140,14 +139,6 @@
  .player .stime, .ttime {
 -fx-color: #444;
  }
- .player .play:hover {
--fx-text-shadow: 0 0 5px #fff;
- }
-
- .player .play:active, .pause-button:active span {
--fx-text-shadow: 0 0 7px #fff;
- }
-
 
  .player .fullscreen {
 -fx-width: 12%;

@@ -1,5 +1,6 @@
 package sample;
 
+import com.google.gson.Gson;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.DoubleProperty;
@@ -66,9 +67,9 @@ public class Controller {
         videos.add(new VideoLibraryItem("https://bobmovies.net/hl/Whiplash_2014_720p.m3u8", "Whiplash"));
         videos.add(new VideoLibraryItem("https://archive.org/download/PenguinsOfMadagascar2014720pBrRipX264YIFY/Penguins%20of%20Madagascar%20(2014)%20720p%20BrRip%20x264%20-%20YIFY.mp4", "Penguins Of Madagascar 2014 720p"));
 
-          File file = new File("D:/Work/MMedia/Хроника/Hronika.2012.Extended.Edition.RUS.BDRip.avi");
-          final String MEDIA_URL = file.toURI().toString();
-        videos.add(new VideoLibraryItem(MEDIA_URL, "My_Millery"));
+        File file = new File("C:/Users/Dima/Downloads/SampleVideo_720x480_1mb.mp4");
+        final String MEDIA_URL = file.toURI().toString();
+        videos.add(new VideoLibraryItem(MEDIA_URL, "Bunny"));
 
         listView.setItems(videos);
 
@@ -90,7 +91,7 @@ public class Controller {
                 lblCurretTimeSec.setText("0");
                 onPlay();
             }
-    });
+        });
 
         slider.setOnMouseReleased(new EventHandler<MouseEvent>() {
             @Override
@@ -106,15 +107,11 @@ public class Controller {
         DoubleProperty width = mediaView.fitWidthProperty();
         DoubleProperty height = mediaView.fitHeightProperty();
 
-
         width.bind(javafx.beans.binding.Bindings.selectDouble(mediaView.sceneProperty(), "width"));
         height.bind(javafx.beans.binding.Bindings.selectDouble(mediaView.sceneProperty(), "height"));
 
-
         mainAp.addEventFilter(KeyEvent.KEY_PRESSED,
                 event -> controlPanel.setVisible(true));
-
-
 
 
        /* Scene stage = mainAp.getScene();
@@ -130,15 +127,10 @@ public class Controller {
     public void parseJson(){
         try {
             String contents = new String(Files.readAllBytes(Paths.get("playlist.json")));
-        //    Gson g = new Gson();
-
+            Gson g = new Gson();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
-
     }
 
     public void onMouseExited(MouseEvent mouseEvent) {
@@ -192,7 +184,7 @@ public class Controller {
          public String toString() {
              return name;
          }
-     }
+    }
 
     public void onPlay() {
         mp.play(); // 4
